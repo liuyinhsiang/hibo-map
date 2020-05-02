@@ -9,18 +9,18 @@ class Header extends Component {
         return;
       case false:
         return (
-          <li className="item">
-            <a href="/auth/google">Login with Google</a>
-          </li>
+          <a className="item right" href="/auth/google">
+            Login with Google
+          </a>
         );
       default:
         return [
-          <li className="item" key="1">
+          <a className="item right" href="/">
             <i className="map icon"></i>Map
-          </li>,
-          <li className="item" key="3">
-            <a href="/api/logout">Logout</a>
-          </li>,
+          </a>,
+          <a className="item" href="/api/logout">
+            Logout
+          </a>,
         ];
     }
   }
@@ -31,7 +31,7 @@ class Header extends Component {
         <Link to={this.props.auth ? '/dashboard' : '/'} className="item">
           Hibo Map
         </Link>
-        <ul className="right item">{this.renderContent()}</ul>
+        {this.renderContent()}
       </div>
     );
   }
