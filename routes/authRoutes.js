@@ -9,11 +9,11 @@ module.exports = (app) => {
     '/auth/google/callback',
     passport.authenticate('google'),
     (req, res) => {
-      res.redirect('/');
+      res.redirect('/dashboard');
       // res.redirect('/maps');
     }
   );
-  app.get('/auth/logout', (req, res) => {
+  app.get('/api/logout', (req, res) => {
     req.logout();
     res.redirect('/');
   });

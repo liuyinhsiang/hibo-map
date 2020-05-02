@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Router } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import Header from './Header';
 import Landing from './Landing';
+import Dashboard from './Dashboard';
 
 class App extends Component {
   componentDidMount() {
@@ -12,11 +13,12 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="ui container">
         <BrowserRouter>
           <div>
             <Header />
-            <Router path="/" exact component={Landing} />
+            <Route path="/" exact component={Landing} />
+            <Route path="/dashboard" exact component={Dashboard} />
           </div>
         </BrowserRouter>
       </div>
