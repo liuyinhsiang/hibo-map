@@ -8,17 +8,20 @@ class Header extends Component {
       case null:
         return;
       case false:
-        return (
-          <a className="item right" href="/auth/google">
+        return [
+          <a key="google-login" className="item right" href="/auth/google">
             Login with Google
-          </a>
-        );
+          </a>,
+          <Link key="register" to="/register" className="item">
+            Register
+          </Link>,
+        ];
       default:
         return [
-          <a className="item right" href="/">
+          <a key="map" className="item right" href="/">
             <i className="map icon"></i>Map
           </a>,
-          <a className="item" href="/api/logout">
+          <a key="logout" className="item" href="/api/logout">
             Logout
           </a>,
         ];
