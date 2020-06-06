@@ -66,4 +66,18 @@ UserSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
 
-module.exports = mongoose.model('users', UserSchema);
+// Cascade delete maps when a user is deleted
+UserSchema.pre('remove', async function (next) {
+  await this.model('Map').deleteMany({ user: this._id });
+  next();
+});
+
+// Reverse populate with virtual
+UserSchema.virtual('maps', {
+  ref: 'Map',
+  localField: '_id',
+  foreignField: '_user',
+  justOne: false,
+});
+
+module.exports = mongoose.model('User', UserSchema);

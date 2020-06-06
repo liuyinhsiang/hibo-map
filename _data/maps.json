@@ -1,7 +1,7 @@
 [
   {
     "_id": "5d713995b721c3bb38c1f5d0",
-    "user": "5d7a514b5d2c12c7449be042",
+    "_user": "5d7a514b5d2c12c7449be111",
     "title": "Taiwanese Milk Tea shop",
     "description": "I just do this for fun",
     "placeIds": [
@@ -13,6 +13,20 @@
       "ChIJc--4QxdD1moRkXy-4ITj7G4",
       "ChIJL0hSVMpC1moRhgoBqOGXCQo",
       "ChIJL6LFbl9D1moRwFSkclPgolg"
-    ]
+    ],
+    "access": "public"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5d5",
+    "_user": "5d7a514b5d2c12c7449be111",
+    "title": "Melbourne uni places",
+    "description": "No a very good memory",
+    "placeIds": [
+      "ChIJcd7_l9lC1moRN3U9OQmxoEQ",
+      "ChIJC0qI6NRC1moRr7ZEiyc9DfQ",
+      "ChIJFfoHNNNC1moRJN-WgaxO9BI",
+      "ChIJu5N069RC1moReTjHM7LMYDA"
+    ],
+    "access": "public"
   }
 ]

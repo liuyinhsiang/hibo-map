@@ -1,0 +1,68 @@
+:root {
+  --compensate-color: #0088a9;
+}
+
+.hibo-text {
+  font-weight: 500;
+  font-size: 20px;
+  color: #edf0f1;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.hibo-text:hover {
+  color: var(--compensate-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 3%;
+  background-color: #24252A;
+  height: 5vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.map-icon {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.option {
+  display: inline-block;
+  padding: 0px 20px;
+  transition: all 0.3s ease 0s;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+}
+
+.option:hover {
+  color: var(--compensate-color);
+}
+
+.nav-button {
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+  color: #edf0f1;
+}

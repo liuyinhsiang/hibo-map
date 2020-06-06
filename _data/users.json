@@ -1,16 +1,23 @@
 [
   {
+    "_id": "5d7a514b5d2c12c7449be111",
+    "displayName": "Hibo Account",
+    "email": "hibo@gmail.com",
+    "role": "admin",
+    "password": "123456"
+  },
+  {
     "_id": "5d7a514b5d2c12c7449be042",
     "displayName": "Admin Account",
     "email": "admin@gmail.com",
-    "role": "user",
+    "role": "admin",
     "password": "123456"
   },
   {
     "_id": "5d7a514b5d2c12c7449be043",
     "displayName": "Publisher Account",
     "email": "publisher@gmail.com",
-    "role": "publisher",
+    "role": "user",
     "password": "123456"
   },
   {
@@ -24,28 +31,28 @@
     "_id": "5d7a514b5d2c12c7449be045",
     "displayName": "John Doe",
     "email": "john@gmail.com",
-    "role": "publisher",
+    "role": "user",
     "password": "123456"
   },
   {
     "_id": "5d7a514b5d2c12c7449be046",
     "displayName": "Kevin Smith",
     "email": "kevin@gmail.com",
-    "role": "publisher",
+    "role": "user",
     "password": "123456"
   },
   {
     "_id": "5c8a1d5b0190b214360dc031",
     "displayName": "Mary Williams",
     "email": "mary@gmail.com",
-    "role": "publisher",
+    "role": "user",
     "password": "123456"
   },
   {
     "_id": "5c8a1d5b0190b214360dc032",
     "displayName": "Sasha Ryan",
     "email": "sasha@gmail.com",
-    "role": "publisher",
+    "role": "user",
     "password": "123456"
   },
   {

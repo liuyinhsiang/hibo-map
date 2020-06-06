@@ -1,0 +1,1 @@
+export const FETCH_DEFAULT_MAPS = 'FETCH_DEFAULT_MAPS';

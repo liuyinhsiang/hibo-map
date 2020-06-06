@@ -1,4 +1,8 @@
+language: generic
 deploy:
   provider: heroku
   api_key:
     secure: $HEROKU_SECRET_KEY
+  app: hibo-map
+  on:
+    repo: liuyinhsiang/hibo-map

@@ -1,5 +1,6 @@
-/node_modules
+node_modules*
 dev.js
 .DS_Store
 working.md
 config.env
+.travis.yml

@@ -14,8 +14,11 @@ connectDB();
 
 // Route files
 const auth = require('./routes/auth');
+const maps = require('./routes/maps');
 
-require('./models/User');
+// Load model
+const User = require('./models/User');
+
 require('./services/passport');
 
 const app = express();
@@ -36,6 +39,7 @@ app.use(passport.session());
 // Mount routers
 require('./routes/authRoutes')(app);
 app.use('/api/v1/auth', auth);
+app.use('/api/v1/maps', maps);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
