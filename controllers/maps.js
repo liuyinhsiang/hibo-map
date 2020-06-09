@@ -1,5 +1,5 @@
-const ErrorResponse = require('../middlewares/error');
-const asyncHandler = require('../middlewares/async');
+const ErrorResponse = require('../middleware/error');
+const asyncHandler = require('../middleware/async');
 const Map = require('../models/Map');
 
 // @desc      Get all default maps

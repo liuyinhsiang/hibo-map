@@ -1,12 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { logout } from '../../redux/auth/auth.actions';
 
 import mapIcon from '../../assets/map-marked.ico';
 
 import './header.styles.css';
 
-const Header = ({ auth, defaultMaps }) => (
+const Header = ({
+  auth: { isAuthenticated, loading },
+  defaultMaps,
+  logout,
+}) => (
   <div className="header">
     <Link to="/">
       <img src={mapIcon} className="map-icon" alt="map-icon" />
@@ -22,12 +27,12 @@ const Header = ({ auth, defaultMaps }) => (
         <Link className="option" to="/about">
           About
         </Link>
-        {auth ? (
-          <a className="option" href="/api/logout">
+        {isAuthenticated ? (
+          <Link className="option" onClick={logout} to="/">
             Logout
-          </a>
+          </Link>
         ) : (
-          <Link className="option" to="/signin">
+          <Link className="option" to="/sign-in">
             Sign In
             {/* <button className="nav-button">Sign In</button> */}
           </Link>
@@ -46,4 +51,4 @@ const mapStateToProps = (state) => ({
   defaultMaps: state.defaultMaps,
 });
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps, { logout })(Header);

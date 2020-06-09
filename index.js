@@ -1,13 +1,13 @@
 const express = require('express');
-const cookieSession = require('cookie-session');
-const passport = require('passport');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 require('colors');
+const cookieParser = require('cookie-parser');
+
 const connectDB = require('./config/db');
 
 // Load env vars
-dotenv.config({ path: './config/config.env' });
+dotenv.config({ path: './config/.env' });
 
 // Connect database
 connectDB();
@@ -16,28 +16,21 @@ connectDB();
 const auth = require('./routes/auth');
 const maps = require('./routes/maps');
 
-// Load model
-const User = require('./models/User');
-
-require('./services/passport');
+// // Load model
+// const User = require('./models/User');
 
 const app = express();
+
+// Body parser
+app.use(express.json());
+
+// Cookie parser
+app.use(cookieParser());
 
 // Dev logging middleware
 if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
 
-app.use(
-  cookieSession({
-    maxAge: 30 * 24 * 60 * 60 * 1000,
-    keys: [process.env.COOKIE_KEY],
-  })
-);
-
-app.use(passport.initialize());
-app.use(passport.session());
-
 // Mount routers
-require('./routes/authRoutes')(app);
 app.use('/api/v1/auth', auth);
 app.use('/api/v1/maps', maps);
 

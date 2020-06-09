@@ -1,50 +1,42 @@
-import React, { Component } from 'react';
-import { Router, Route, Switch, Redirect } from 'react-router-dom';
+import React, { Fragment, useEffect } from 'react';
+import { Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchUser } from '../redux/user/user.actions';
-import { fetchDefaultMaps } from '../redux/map/map.actions';
+// import { fetchDefaultMaps } from '../redux/map/map.actions';
+import Routes from '../routes/Routes';
 import history from '../history';
 
-import Header1 from './header/header.component';
-import Header from './Header';
-import Landing from './Landing';
-import Dashboard from './Dashboard';
-import Register from './Register';
-import SignInAndSignUpPage from '../pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
+import Header from './header/header.component';
+import Landing from '../pages/landing/Landing.component';
+
+// Redux
+import { loadUser } from '../redux/auth/auth.actions';
+import store from '../store';
+import setAuthToken from '../utils/setAuthToken';
 
 import './App.css';
 
-class App extends Component {
-  componentDidMount() {
-    this.props.fetchUser();
-    this.props.fetchDefaultMaps();
-  }
-  render() {
-    return (
-      <div>
-        <Router history={history}>
-          <Header1 />
-          <Header />
-          <Switch>
-            <Route path="/" exact component={Landing} />
-            <Route path="/dashboard" exact component={Dashboard} />
-            <Route path="/register" exact component={Register} />
-            <Route
-              path="/signin"
-              exact
-              render={() =>
-                this.props.auth ? <Redirect to="/" /> : <SignInAndSignUpPage />
-              }
-            />
-          </Switch>
-        </Router>
-      </div>
-    );
-  }
-}
+const App = ({ auth: { isAuthenticated } }) => {
+  useEffect(() => {
+    setAuthToken(localStorage.token);
+    store.dispatch(loadUser());
+  }, []);
+
+  return (
+    <Fragment>
+      <Router history={history}>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route component={Routes} />
+        </Switch>
+      </Router>
+    </Fragment>
+  );
+};
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
-export default connect(null, { fetchUser, fetchDefaultMaps })(App);
+// export default connect(null, { fetchUser, fetchDefaultMaps })(App);
+export default connect(mapStateToProps)(App);

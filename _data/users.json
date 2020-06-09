@@ -1,112 +1,112 @@
 [
   {
     "_id": "5d7a514b5d2c12c7449be111",
-    "displayName": "Hibo Account",
+    "name": "Hibo Account",
     "email": "hibo@gmail.com",
     "role": "admin",
     "password": "123456"
   },
   {
     "_id": "5d7a514b5d2c12c7449be042",
-    "displayName": "Admin Account",
+    "name": "Admin Account",
     "email": "admin@gmail.com",
     "role": "admin",
     "password": "123456"
   },
   {
     "_id": "5d7a514b5d2c12c7449be043",
-    "displayName": "Publisher Account",
+    "name": "Publisher Account",
     "email": "publisher@gmail.com",
     "role": "user",
     "password": "123456"
   },
   {
     "_id": "5d7a514b5d2c12c7449be044",
-    "displayName": "User Account",
+    "name": "User Account",
     "email": "user@gmail.com",
     "role": "user",
     "password": "123456"
   },
   {
     "_id": "5d7a514b5d2c12c7449be045",
-    "displayName": "John Doe",
+    "name": "John Doe",
     "email": "john@gmail.com",
     "role": "user",
     "password": "123456"
   },
   {
     "_id": "5d7a514b5d2c12c7449be046",
-    "displayName": "Kevin Smith",
+    "name": "Kevin Smith",
     "email": "kevin@gmail.com",
     "role": "user",
     "password": "123456"
   },
   {
     "_id": "5c8a1d5b0190b214360dc031",
-    "displayName": "Mary Williams",
+    "name": "Mary Williams",
     "email": "mary@gmail.com",
     "role": "user",
     "password": "123456"
   },
   {
     "_id": "5c8a1d5b0190b214360dc032",
-    "displayName": "Sasha Ryan",
+    "name": "Sasha Ryan",
     "email": "sasha@gmail.com",
     "role": "user",
     "password": "123456"
   },
   {
     "_id": "5c8a1d5b0190b214360dc033",
-    "displayName": "Greg Harris",
+    "name": "Greg Harris",
     "email": "greg@gmail.com",
     "role": "user",
     "password": "123456"
   },
   {
     "_id": "5c8a1d5b0190b214360dc034",
-    "displayName": "Derek Glover",
+    "name": "Derek Glover",
     "email": "derek@gmail.com",
     "role": "user",
     "password": "123456"
   },
   {
     "_id": "5c8a1d5b0190b214360dc035",
-    "displayName": "Stephanie Hanson",
+    "name": "Stephanie Hanson",
     "email": "steph@gmail.com",
     "role": "user",
     "password": "123456"
   },
   {
     "_id": "5c8a1d5b0190b214360dc036",
-    "displayName": "Jerry Wiliams",
+    "name": "Jerry Wiliams",
     "email": "jerry@gmail.com",
     "role": "user",
     "password": "123456"
   },
   {
     "_id": "5c8a1d5b0190b214360dc037",
-    "displayName": "Maggie Johnson",
+    "name": "Maggie Johnson",
     "email": "maggie@gmail.com",
     "role": "user",
     "password": "123456"
   },
   {
     "_id": "5c8a1d5b0190b214360dc038",
-    "displayName": "Barry Dickens",
+    "name": "Barry Dickens",
     "email": "barry@gmail.com",
     "role": "user",
     "password": "123456"
   },
   {
     "_id": "5c8a1d5b0190b214360dc039",
-    "displayName": "Ryan Bolin",
+    "name": "Ryan Bolin",
     "email": "ryan@gmail.com",
     "role": "user",
     "password": "123456"
   },
   {
     "_id": "5c8a1d5b0190b214360dc040",
-    "displayName": "Sara Kensing",
+    "name": "Sara Kensing",
     "email": "sara@gmail.com",
     "role": "user",
     "password": "123456"

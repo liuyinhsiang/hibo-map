@@ -4,3 +4,4 @@ dev.js
 working.md
 config.env
 .travis.yml
+.env
